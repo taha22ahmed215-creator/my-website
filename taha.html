@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>تسجيل الدخول</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>تسجيل الدخول</h2>
+
+    <input type="text" id="username" placeholder="اسم المستخدم">
+    <input type="password" id="password" placeholder="كلمة المرور">
+
+   <a href="PRO.Html"> <button onclick="login()">دخول</button></a>
+</div>
+
+<script>
+function login() {
+    let user = document.getElementById("username").value;
+    let pass = document.getElementById("password").value;
+
+    if(user === "" || pass === ""){
+        alert("من فضلك أدخل البيانات");
+        return;
+    }
+
+    // عند نجاح تسجيل الدخول
+    window.location.href = "index.html";
+}
+</script>
+
+</body>
+</html>
